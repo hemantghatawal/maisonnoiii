@@ -1,11 +1,10 @@
 .selected-domains {
-  padding: 120px 80px;
+  padding: 120px 0;
   background: #000;
 }
 
 .domains-list {
-  max-width: 1440px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .domain-item {
@@ -47,18 +46,4 @@
   color: black;
 }
 
-/* Tablet */
-@media (max-width: 768px) {
-  .selected-domains {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-}
 
-/* Mobile */
-@media (max-width: 480px) {
-  .selected-domains {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-}

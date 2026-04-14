@@ -2,18 +2,24 @@ import './Disciplines.css';
 import { useState } from 'react';
 import Accordion from '../common/Accordion';
 import { DISCIPLINES } from '../../constants/data';
-import { ASSETS } from '../../constants/assets';
+import disciplinesBg from '../../assets/images/disciplines-bg.png';
 import heroSide from '../../assets/images/hero-side.svg';
 
-const imgGroup9 = ASSETS.disciplinesBg;
-
 export default function Disciplines() {
-    const [openAccordion, setOpenAccordion] = useState(null);
+    const [openAccordions, setOpenAccordions] = useState([]);
+
+    const toggleAccordion = (index) => {
+        setOpenAccordions(prev => {
+            if (prev.includes(index)) return prev.filter(i => i !== index);
+            if (prev.length >= 3) return [...prev.slice(1), index];
+            return [...prev, index];
+        });
+    };
 
     return (
         <section className="disciplines">
             <div className="disciplines-bg">
-                <img src={imgGroup9} alt="" />
+                <img src={disciplinesBg} alt="" />
             </div>
             <img src={heroSide} alt="" className="disciplines-side-decoration" />
             <div className="disciplines-content">
@@ -24,9 +30,10 @@ export default function Disciplines() {
                     {DISCIPLINES.map((discipline, index) => (
                         <Accordion
                             key={index}
-                            title={discipline}
-                            isOpen={openAccordion === index}
-                            onToggle={() => setOpenAccordion(openAccordion === index ? null : index)}
+                            title={discipline.title}
+                            description={discipline.description}
+                            isOpen={openAccordions.includes(index)}
+                            onToggle={() => toggleAccordion(index)}
                         />
                     ))}
                 </div>

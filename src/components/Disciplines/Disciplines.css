@@ -34,15 +34,16 @@
   position: relative;
   z-index: 1;
   display: flex;
-  gap: 200px;
-  max-width: 1440px;
-  margin: 0 auto;
+  gap: clamp(60px, 10vw, 400px);
+  /* max-width: 1440px; */
 }
 
 .disciplines-title-sticky {
   position: sticky;
   top: 100px;
+  left: 0px;
   width: 404px;
+  min-width: 200px;
   height: 291px;
   display: flex;
   align-items: center;
@@ -50,7 +51,7 @@
 }
 
 .disciplines-title-sticky h2 {
-  font-size: 64px;
+  font-size: clamp(36px, 5vw, 64px);
   letter-spacing: 19.2px;
   text-transform: uppercase;
   text-align: center;
@@ -78,7 +79,7 @@
 
 .accordion-line {
   height: 1px;
-  background: #000;
+  background: #C2C2C2;
   width: 100%;
 }
 
@@ -90,7 +91,7 @@
 }
 
 .accordion-title {
-  font-size: 32px;
+  font-size: clamp(18px, 2.5vw, 32px);
   letter-spacing: 3.2px;
   text-transform: uppercase;
   color: #000;
@@ -100,44 +101,87 @@
 .accordion-icon {
   width: 40px;
   height: 40px;
+  flex-shrink: 0;
   background: #ddd;
   border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   transform: rotate(-90deg);
+  transition: background 0.4s ease, transform 0.4s ease;
+}
+
+.accordion--open .accordion-icon {
+  background: #000;
+  transform: rotate(0deg);
 }
 
 .accordion-icon img {
   width: 20px;
   height: 20px;
   transform: rotate(180deg);
+  transition: filter 0.4s ease;
+}
+
+.accordion--open .accordion-icon img {
+  filter: invert(1);
+}
+
+.accordion-body {
+  overflow: hidden;
+  height: 0;
+  transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-description {
+  font-size: clamp(1.2vw, 1.2vw, 16px);
+  color: #555;
+  text-align: left;
+  line-height: 1.7;
+  padding: 12px 0 4px;
 }
 
 /* Laptop */
 @media (max-width: 1024px) {
+  .disciplines {
+    padding: 80px 40px;
+  }
+
   .disciplines-content {
     flex-direction: column;
+    gap: 40px;
   }
 
   .disciplines-title-sticky {
     position: relative;
     top: 0;
+    width: 100%;
+    height: auto;
   }
 }
 
 /* Tablet */
 @media (max-width: 768px) {
   .disciplines {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding: 80px 24px;
+  }
+
+  .disciplines-title-sticky h2 {
+    letter-spacing: 10px;
   }
 }
 
 /* Mobile */
 @media (max-width: 480px) {
   .disciplines {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 60px 16px;
+  }
+
+  .disciplines-title-sticky h2 {
+    letter-spacing: 6px;
+  }
+
+  .accordion-title {
+    letter-spacing: 1.5px;
   }
 }
