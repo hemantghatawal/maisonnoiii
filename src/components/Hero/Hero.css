@@ -17,14 +17,23 @@
   pointer-events: none;
 }
 
+.hero-image-wrapper{
+  background-color: brown;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .hero-image {
-  position: relative;
+  position: absolute;
   left: 50%;
   transform: translateX(-50%);
   width: 40vw;
   height: 40vw;
   border-radius: 50%;
   overflow: hidden;
+  object-fit: cover;
   z-index: 10;
 }
 

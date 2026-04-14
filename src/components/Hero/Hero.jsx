@@ -13,8 +13,8 @@ export default function Hero() {
                     A house shaped by intention, practice, and time.
                 </p>
             </div>
-            <div className="hero-image">
-                <img src={imgRectangle5} alt="" />
+            <div className="hero-image-wrapper">
+                <img src={imgRectangle5} alt="" className='hero-image' />
             </div>
             <img src={heroSide} alt="" className="hero-side-decoration" />
         </section>

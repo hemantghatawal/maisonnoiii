@@ -2,6 +2,7 @@
   padding: 120px 80px;
   background: #000;
   position: relative;
+  overflow: hidden;
 }
 
 .clientele-subtitle {
@@ -13,22 +14,43 @@
 }
 
 .client-gallery {
-  position: relative;
-  height: 744px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   width: 100%;
   max-width: 1747px;
   margin: 0 auto;
-  overflow: hidden;
+}
+
+.gallery-row-wrapper {
+  width: 100%;
+  overflow: visible;
+}
+
+.gallery-row {
+  display: flex;
+  gap: 16px;
+  width: 115%;
+}
+
+/* Top row: shifted right — first card clips on left, last card clips on right */
+.gallery-row-top .gallery-row {
+  margin-left: -8%;
+}
+
+/* Bottom row: shifted left — first card clips on left, last card clips on right */
+.gallery-row-bottom .gallery-row {
+  margin-left: -2%;
 }
 
 .gallery-item {
-  position: absolute;
-  width: 21%;
-  height: 48%;
+  flex: 1;
+  aspect-ratio: 1 / 1;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
   overflow: hidden;
   background: rgba(217, 217, 217, 0.12);
+  min-width: 0;
 }
 
 .gallery-item img {
