@@ -1,3 +1,4 @@
+import './Hero.css';
 import { ASSETS } from '../../constants/assets';
 import heroSide from '../../assets/images/hero-side.svg';
 
@@ -5,9 +6,9 @@ export default function Hero() {
     const imgRectangle5 = ASSETS.hero;
     return (
         <section className="hero">
-            {/* <div className="hero-image">
+            <div className="hero-image">
                 <img src={imgRectangle5} alt="" />
-            </div> */}
+            </div>
             <img src={heroSide} alt="" className="hero-side-decoration" />
             <h1 className="hero-title">LA MAISON</h1>
             <p className="hero-subtitle">

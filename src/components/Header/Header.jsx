@@ -1,3 +1,4 @@
+import './Header.css';
 import { ASSETS } from '../../constants/assets';
 
 export default function Header() {

@@ -1,3 +1,4 @@
+import './Disciplines.css';
 import { useState } from 'react';
 import Accordion from '../common/Accordion';
 import { DISCIPLINES } from '../../constants/data';

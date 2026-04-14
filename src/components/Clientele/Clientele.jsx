@@ -1,3 +1,4 @@
+import './Clientele.css';
 import SectionTitle from '../common/SectionTitle';
 import ClientGallery from './ClientGallery';
 

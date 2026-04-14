@@ -1,3 +1,4 @@
+import './Domains.css';
 import SectionTitle from '../common/SectionTitle';
 import SectionSubtitle from '../common/SectionSubtitle';
 import DomainItem from '../common/DomainItem';

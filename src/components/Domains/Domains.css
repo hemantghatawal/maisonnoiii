@@ -1,0 +1,39 @@
+.selected-domains {
+  padding: 120px 80px;
+  background: #000;
+}
+
+.domains-list {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.domain-item {
+  height: 113px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(217, 217, 217, 0.01);
+}
+
+.domain-item p {
+  font-size: 40px;
+  text-align: center;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .selected-domains {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .selected-domains {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

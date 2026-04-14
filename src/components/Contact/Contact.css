@@ -1,0 +1,86 @@
+.contact {
+  padding: 120px 80px 60px;
+  background: #000;
+}
+
+.contact-title {
+  font-size: 150px;
+  letter-spacing: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-subtitle {
+  font-family: 'Snell Roundhand', cursive;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 80px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  font-size: 20px;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+}
+
+.footer-left {
+  text-align: left;
+}
+
+.footer-center {
+  text-align: center;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+/* Laptop */
+@media (max-width: 1024px) {
+  .contact-title {
+    font-size: 80px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .contact {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .contact-title {
+    font-size: 50px;
+    letter-spacing: 10px;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-right {
+    text-align: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .contact {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

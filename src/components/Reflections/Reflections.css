@@ -1,0 +1,68 @@
+.reflections {
+  padding: 120px 80px;
+  background: #000;
+}
+
+.reflections-subtitle {
+  font-family: 'Snell Roundhand', cursive;
+  font-size: 32px;
+  text-align: center;
+  margin: 30px auto 80px;
+}
+
+.reflections-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1207px;
+  margin: 0 auto;
+}
+
+.reflection-card {
+  background: #ebebeb;
+  border-radius: 10px;
+  padding: 30px;
+  height: 425px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.reflection-name {
+  font-size: 24px;
+  color: #000;
+  text-align: center;
+}
+
+.reflection-text {
+  font-size: 24px;
+  color: #000;
+  line-height: 1;
+}
+
+/* Laptop */
+@media (max-width: 1024px) {
+  .reflections-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .reflections {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .reflections-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .reflections {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

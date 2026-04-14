@@ -1,0 +1,20 @@
+.section-title {
+  font-size: 50px;
+  letter-spacing: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-subtitle {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 36px;
+  }
+}

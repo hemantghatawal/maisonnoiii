@@ -1,0 +1,24 @@
+.bg-decoration {
+  position: absolute;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.bg-decoration-1 {
+  top: 1.06%;
+  left: 84.87%;
+  width: 50%;
+  transform: rotate(90deg);
+}
+
+.bg-decoration-2 {
+  top: 44.41%;
+  left: 40.73%;
+  width: 18%;
+  opacity: 0.3;
+}
+
+.bg-decoration img {
+  width: 100%;
+  height: auto;
+}

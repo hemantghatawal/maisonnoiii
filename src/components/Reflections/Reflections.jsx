@@ -1,3 +1,4 @@
+import './Reflections.css';
 import SectionTitle from '../common/SectionTitle';
 import ReflectionCard from '../common/ReflectionCard';
 import { REFLECTIONS_DATA } from '../../constants/data';
