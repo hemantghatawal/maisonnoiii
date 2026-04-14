@@ -14,7 +14,7 @@ export default function FlamingoLife() {
     return (
         <div className="flamingo-life">
             <Header />
-            <BackgroundDecorations />
+            {/* <BackgroundDecorations /> */}
             <Hero />
             <Domains />
             <Disciplines />
