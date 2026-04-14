@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Accordion from '../common/Accordion';
 import { DISCIPLINES } from '../../constants/data';
 import { ASSETS } from '../../constants/assets';
+import heroSide from '../../assets/images/hero-side.svg';
 
 const imgGroup9 = ASSETS.disciplinesBg;
 
@@ -14,6 +15,7 @@ export default function Disciplines() {
             <div className="disciplines-bg">
                 <img src={imgGroup9} alt="" />
             </div>
+            <img src={heroSide} alt="" className="disciplines-side-decoration" />
             <div className="disciplines-content">
                 <div className="disciplines-title-sticky">
                     <h2>Our disciplines</h2>

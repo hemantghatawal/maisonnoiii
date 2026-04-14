@@ -1,13 +1,27 @@
 .disciplines {
   position: relative;
   padding: 120px 80px;
-  min-height: 916px;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 .disciplines-bg {
   position: absolute;
   inset: 0;
   z-index: 0;
+}
+
+.disciplines-side-decoration {
+  position: absolute;
+  left: -25vw;
+  top: 10%;
+  height: 80vh;
+  width: 100vh;
+  pointer-events: none;
+  z-index: 1;
+  /* converts black SVG paths to #9F9F9F */
+  filter: brightness(0) saturate(100%) invert(65%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%);
+  opacity: 1;
 }
 
 .disciplines-bg img {
@@ -20,14 +34,14 @@
   position: relative;
   z-index: 1;
   display: flex;
-  gap: 100px;
+  gap: 200px;
   max-width: 1440px;
   margin: 0 auto;
 }
 
 .disciplines-title-sticky {
   position: sticky;
-  top: 200px;
+  top: 100px;
   width: 404px;
   height: 291px;
   display: flex;
